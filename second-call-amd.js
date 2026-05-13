@@ -94,19 +94,14 @@ app.get('/startcall', async(req, res) => {
         "endpoint": [
           {
             "type": "phone",
-            "number": pstnCalleeNumber2,
-            "advancedMachineDetection": {
-              "behavior": "continue",
-              "mode": "default"  // use this value for the latest AMD implementation
-              // "beepTimeout": 10
-            }
+            "number": pstnCalleeNumber2
           }
-        ]
-        // "advancedMachineDetection": {
-        //   "behavior": "continue",
-        //   "mode": "default"  // use this value for the latest AMD implementation
-        //   // "beepTimeout": 10
-        // }
+        ],
+        "advanced_machine_detection": {
+          "behavior": "continue",
+          "mode": "default"  // use this value for the latest AMD implementation
+          // "beepTimeout": 10
+        }
       }
     ]
     })
