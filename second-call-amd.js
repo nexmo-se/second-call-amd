@@ -89,7 +89,7 @@ app.get('/startcall', async(req, res) => {
         "action": "connect",
         "eventUrl": ["https://" + hostName + "/event_2"],
         "eventMethod": "POST",  
-        "timeout": "45",
+        // "timeout": "45",
         "from": servicePhoneNumber,
         "endpoint": [
           {
@@ -97,10 +97,10 @@ app.get('/startcall', async(req, res) => {
             "number": pstnCalleeNumber2
           }
         ],
-        "advanced_machine_detection": {
+        "advancedMachineDetection": {
           "behavior": "continue",
-          "mode": "default"  // use this value for the latest AMD implementation
-          // "beepTimeout": 10
+          "mode": "default",  // use this value for the latest AMD implementation
+          "beep_timeout": 30
         }
       }
     ]
